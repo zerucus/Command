@@ -48,4 +48,11 @@
         </plugin>
     </plugins>
   </build>
+  <scm>  
+  <connection>scm:git:https://github.com/zerucus/Command.git</connection>
+  <developerConnection>scm:git:git@github.com:zerucus/Command.git</developerConnection>
+  <url>https://github.com/zerucus/Command</url>
+  <tag>HEAD</tag>
+</scm>
+
 </project>
