@@ -20,7 +20,7 @@ public class TypeWrapper {
         outClass = privToObj.get(c);
     }
 
-    public static Class convet(Class c) {
+    public static Class convert(Class c) {
         Class cc = privToObj.get(c);
         if (cc == null)
             return c;

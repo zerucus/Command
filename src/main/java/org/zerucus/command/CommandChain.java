@@ -96,7 +96,7 @@ public class CommandChain {
 
     private Object getPrimitiveParameter(Class cl, String defaultValue, String paramValue) throws NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
         Object o;
-        Constructor cr = TypeWrapper.convet(cl).getConstructor(String.class);
+        Constructor cr = TypeWrapper.convert(cl).getConstructor(String.class);
         // jeżeli jest parametr w linii wywołań, to go wrzucamy, jeżeli nie, wówczas bierzemy default.
         if (paramValue != null) {
             o = cr.newInstance(paramValue);
