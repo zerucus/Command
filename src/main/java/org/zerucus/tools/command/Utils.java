@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package org.zerucus.command;
+package org.zerucus.tools.command;
 
 import java.io.FileInputStream;
 import java.util.HashMap;

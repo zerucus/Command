@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zerucus.command;
+package org.zerucus.tools.command;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Constructor;
