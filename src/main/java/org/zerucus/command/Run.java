@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.zerucus.tools.command;
+package org.zerucus.command;
 import java.util.*;
 import org.zerucus.command.jaxb.CommandChain;
 
@@ -24,7 +24,7 @@ public class Run {
         }
         try {
         currentCommand = Utils.getCurrentCommand(params, p[0]);
-            org.zerucus.tools.command.CommandChain cc = new org.zerucus.tools.command.CommandChain(currentCommand, params);
+            org.zerucus.command.CommandChain cc = new org.zerucus.command.CommandChain(currentCommand, params);
         cc.execute();
         }
         catch (Exception e) {e.printStackTrace();}

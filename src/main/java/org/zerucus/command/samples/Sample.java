@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package org.zerucus.tools.command.samples;
+package org.zerucus.command.samples;
 
 /**
  *
