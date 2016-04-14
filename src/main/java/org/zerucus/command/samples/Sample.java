@@ -3,27 +3,27 @@
  * and open the template in the editor.
  */
 
-package org.zerucus.command;
+package org.zerucus.command.samples;
 
 /**
  *
  * @author zbigniewk
  */
-public class Test {
+public class Sample {
     String t = null;
 
-    public Test (String t) {
+    public Sample (String t) {
         this. t = t;
         
     }
 
-    public Test objMethod(String t) {
+    public Sample objMethod(String t) {
         System.out.println("objMethod: "+t);
-        return new Test(t);
+        return new Sample(t);
     }
 
-    public void objMethod1(Test t) {
-        System.out.println("objMethod1 with class Test: "+t.t);
+    public void objMethod1(Sample t) {
+        System.out.println("objMethod1 with Sample Class: "+t.t);
     }
     public void method1(int a) {
         System.out.println("Method1a for class "+t+" : "+a);

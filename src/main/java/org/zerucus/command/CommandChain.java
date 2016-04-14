@@ -80,7 +80,7 @@ public class CommandChain {
             if (cl.isPrimitive() || "java.lang.String".equals(cl.getName())) {
                 o[i++] = getPrimitiveParameter(cl, par.getContent(), (String) params.get(par.getName()));
             } else {
-                o[i++] = getObjectParameter(objs, par.getName());
+                o[i++] = getObjectParameter(objs, par.getContent());
             }
         }
         Object runObj = null;

@@ -42,11 +42,4 @@
                 <xsd:attribute name="type" type="xsd:string" use="required"/>
     </xsd:complexType>
 
-    <xsd:simpleType name="countries">
-        <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="pl"/>
-            <xsd:enumeration value="en"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-
 </xsd:schema>

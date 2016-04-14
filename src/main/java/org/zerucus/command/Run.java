@@ -27,7 +27,7 @@ public class Run {
         org.zerucus.command.CommandChain cc = new org.zerucus.command.CommandChain(currentCommand, params);
         cc.execute();
         }
-        catch (Exception e) {System.out.println(e.toString());}
+        catch (Exception e) {e.printStackTrace();}
  
 
 //wykonujemy wszystkie command w kolejno�ci ich wyst�powania w pliku XML.
