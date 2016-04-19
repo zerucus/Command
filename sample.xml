@@ -7,20 +7,32 @@
             <description>chainName [-param1] - description of param1
                 -param1 - description of param1</description>
             <params>
-                <param name="-param1" position="0" type="java.lang.String">Konstructor</param>
+                <param name="-param1" position="0" type="java.lang.String">"Konstructor"</param>
             </params>
         </command>
         <command name="instance2" path="" className="org.zerucus.command.samples.Sample" classInstance="instance1" method="objMethod">
             <description>chainName [-param1] - description of param1
                 -param1 - description of param1</description>
             <params>
-                <param name="-param2" position="0" type="java.lang.String">Klasa przekazana</param>
+                <param name="-param2" position="0" type="java.lang.String">"Klasa przekazana"</param>
             </params>
         </command>
         <command name="instance3" path="" className="org.zerucus.command.samples.Sample" classInstance="instance2" method="objMethod1">
             <description/>
             <params>
                 <param name="i2" position="0" type="org.zerucus.command.samples.Sample">instance2</param>
+            </params>
+        </command>
+        <command name="instance3" path="" className="org.zerucus.command.samples.Sample" classInstance="instance2" method="method4">
+            <description/>
+            <params>
+                <param name="i2" position="0" type="java.lang.Integer">3</param>
+            </params>
+        </command>
+        <command name="instance3" path="" className="org.zerucus.command.samples.Sample" classInstance="instance2" method="method1">
+            <description/>
+            <params>
+                <param name="i2" position="0" type="int">56</param>
             </params>
         </command>
     </commandChain>

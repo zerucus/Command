@@ -75,11 +75,14 @@ public class CommandChain {
         Object[] o = new Object[ctr != null ? ctr.getParameterTypes().length : m.getParameterTypes().length];
         int i = 0;
         for (Param par : comm.getParams().getParam()) {
-//                Class cl = Class.forName(par.getType()); // klasa parametru metody
             Class cl = ctr != null ? ctr.getParameterTypes()[i] : m.getParameterTypes()[i];
-            if (cl.isPrimitive() || "java.lang.String".equals(cl.getName())) {
-                o[i++] = getPrimitiveParameter(cl, par.getContent(), (String) params.get(par.getName()));
-            } else {
+            // is primitive or not erlier created object
+            if (cl.isPrimitive() || par.getContent().matches("-?\\d+(\\.\\d+)?")) {
+                o[i++] = getPrimitiveParameter(cl, par.getContent(), (String) params.get(par.getName()));                
+            } else if (par.getContent().matches("\\\".*\\\"")) {
+                o[i++] = getPrimitiveParameter(cl, par.getContent().substring(1).substring(par.getContent().length()-3, par.getContent().length()-2), (String) params.get(par.getName()));                 
+            }
+             else {
                 o[i++] = getObjectParameter(objs, par.getContent());
             }
         }
