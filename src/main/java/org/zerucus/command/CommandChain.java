@@ -43,8 +43,8 @@ public class CommandChain {
         Object o;
         for (Command c : commandChain.getCommand()) {
             o = executeMethod(methods.get(c), returnObjects, c, params);
-            if (o != null) {
-                returnObjects.put(c.getName(), o);
+            if (o != null && c.getInstanceName() != null) {
+                returnObjects.put(c.getInstanceName(), o);
             }
         }
 
@@ -80,7 +80,7 @@ public class CommandChain {
             if (cl.isPrimitive() || par.getContent().matches("-?\\d+(\\.\\d+)?")) {
                 o[i++] = getPrimitiveParameter(cl, par.getContent(), (String) params.get(par.getName()));                
             } else if (par.getContent().matches("\\\".*\\\"")) {
-                o[i++] = getPrimitiveParameter(cl, par.getContent().substring(1).substring(par.getContent().length()-3, par.getContent().length()-2), (String) params.get(par.getName()));                 
+                o[i++] = getPrimitiveParameter(cl, par.getContent().substring(1).substring(0, par.getContent().length()-2), (String) params.get(par.getName()));                 
             }
              else {
                 o[i++] = getObjectParameter(objs, par.getContent());
